@@ -13,6 +13,8 @@ public:
 
 int main( ) {
     Derived d;
+    Base b1;
+    b1.setLevel(2);
     // d.level = 2;      ❌ Error - still hidden outside
 
     return 0;
