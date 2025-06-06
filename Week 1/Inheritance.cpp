@@ -5,10 +5,14 @@
 class Creature{
     public:
        static double HP;
+       // can't directly initilize static var inside class like HP = 10; 
+      // static varible can only be used in oly one file.
        std::string name;
+    
+       // Constructor
+       Creature(std::string n) : name(n) {
+        // name = n; == name(n)
 
-       Creature(std::string n) {
-        name = n;
         std::cout<<"Creature: "<< name << std::endl;
        }
 
@@ -40,13 +44,13 @@ class Dragon : public Monster{
         }
 
         void printInfo( ){
-            std::cout<<"[Info] Dragon: "<< name << " HP: "<<HP;
+            std::cout<<"[Info] Dragon: "<< name << " HP: "<<HP<<std::endl;
         }
 
         
 };
 
-double Creature :: HP(100);
+double Creature :: HP(100); 
 
 
 int main ( ) {
